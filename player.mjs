@@ -1,5 +1,5 @@
-export const playerWidth = 200;
-export const playerHeight = 200;
+export const playerWidth = 100;
+export const playerHeight = 100;
 
 export function createPlayer() {
   const player = document.createElement("div");

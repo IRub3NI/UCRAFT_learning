@@ -1,6 +1,3 @@
-import "./player.mjs";
-import "./bullet.mjs";
-import "./enemy.mjs";
 import { creatBullet } from "./bullet.mjs";
 import { createEnemy } from "./enemy.mjs";
 import { createPlayer, playerHeight } from "./player.mjs";
