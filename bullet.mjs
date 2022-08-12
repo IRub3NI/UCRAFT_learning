@@ -1,9 +1,7 @@
-import {playerHeight} from "./player.mjs";
-
 const bulletWidth = 20;
 const bulletHeight = 20;
 
-export function creatBullet() {
+export function creatBullet(playerHeight) {
     const bullet = document.createElement("div");
     bullet.style.width = bulletWidth + "px";
     bullet.style.height = bulletHeight + "px";
