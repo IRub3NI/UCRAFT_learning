@@ -6,7 +6,8 @@ export const playerWidth = 100;
 export const playerHeight = 100;
 
 
-document.addEventListener("keydown", function (event) {
+const playerMovment = document.addEventListener;
+playerMovment("keydown", function (event) {
   if (event.code === "ArrowDown") {
     player.style.top = parseInt(player.style.top) + 20 + "px";
   }
