@@ -3,14 +3,13 @@ import "./bullet.mjs";
 import "./enemy.mjs";
 import { creatBullet } from "./bullet.mjs";
 import { createEnemy } from "./enemy.mjs";
-import { playerHeight } from "./player.mjs";
+import { createPlayer, playerHeight } from "./player.mjs";
 
-const player = document.querySelector("#player");
-
+const player = createPlayer();
 
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {
-    creatBullet(playerHeight);
+    creatBullet(playerHeight, player);
   }
 });
 

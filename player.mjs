@@ -1,26 +1,34 @@
-const player = document.querySelector("#player");
+export const playerWidth = 200;
+export const playerHeight = 200;
 
-// TODO: Create player ptogrammatically, isntead of in HTML
+export function createPlayer() {
+  const player = document.createElement("div");
+  player.style.width = playerWidth + "px";
+  player.style.height = playerHeight + "px";
+  player.style.backgroundColor = "red";
+  player.style.position = "relative";
+  player.style.top = "600px";
+  player.style.left = "300px";
+  document.body.appendChild(player);
 
-export const playerWidth = 100;
-export const playerHeight = 100;
+  const playerMovment = document.addEventListener;
+  playerMovment("keydown", function (event) {
+    if (event.code === "ArrowDown") {
+      player.style.top = parseInt(player.style.top) + 20 + "px";
+    }
 
+    if (event.code === "ArrowRight") {
+      player.style.left = parseInt(player.style.left) + 20 + "px";
+    }
 
-const playerMovment = document.addEventListener;
-playerMovment("keydown", function (event) {
-  if (event.code === "ArrowDown") {
-    player.style.top = parseInt(player.style.top) + 20 + "px";
-  }
+    if (event.code === "ArrowUp") {
+      player.style.top = parseInt(player.style.top) - 20 + "px";
+    }
 
-  if (event.code === "ArrowRight") {
-    player.style.left = parseInt(player.style.left) + 20 + "px";
-  }
+    if (event.code === "ArrowLeft") {
+      player.style.left = parseInt(player.style.left) - 20 + "px";
+    }
+  });
 
-  if (event.code === "ArrowUp") {
-    player.style.top = parseInt(player.style.top) - 20 + "px";
-  }
-
-  if (event.code === "ArrowLeft") {
-    player.style.left = parseInt(player.style.left) - 20 + "px";
-  }
-});
+  return player;
+}
