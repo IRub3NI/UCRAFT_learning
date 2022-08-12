@@ -1,4 +1,3 @@
-
 export function createEnemy() {
   const enenmy = document.createElement("div");
   enenmy.style.width = "50px";
@@ -13,4 +12,3 @@ export function createEnemy() {
     enenmy.style.left = parseInt(enenmy.style.left) + 1 + "px";
   }, 1);
 }
-
