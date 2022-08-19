@@ -9,8 +9,11 @@ export function createEnemy() {
   document.body.appendChild(enenmy);
 
   setInterval(function () {
-    enenmy.style.left = parseInt(enenmy.style.left) + 1 + "px";
+    const newLeft = parseInt(enenmy.style.left) + 1;
+    enenmy.style.left = newLeft + "px";
+
+    if (newLeft > window.innerWidth) {
+      enenmy.remove();
+    }
   }, 1);
 }
-
-// TODO: remove the enemy when it is out of boundries
