@@ -16,7 +16,7 @@ export function creatBullet(playerHeight, player) {
     const newTop = parseInt(bullet.style.top) - 1;
     bullet.style.top = newTop + "px";
     
-    if (newTop < 0) {
+    if (newTop + bulletHeight< 0) {
       bullet.remove();
       clearInterval(intervalRef);
     }
