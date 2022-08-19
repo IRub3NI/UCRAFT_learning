@@ -12,3 +12,5 @@ export function createEnemy() {
     enenmy.style.left = parseInt(enenmy.style.left) + 1 + "px";
   }, 1);
 }
+
+// TODO: remove the enemy when it is out of boundries

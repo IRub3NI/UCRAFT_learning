@@ -1,3 +1,5 @@
+// TODO: make players's width 300px, and make sure bullet is still in middle
+// TODO: make player shape logic, you can start just by letting user customize color
 export const playerWidth = 100;
 export const playerHeight = 100;
 

@@ -11,5 +11,3 @@ document.addEventListener("keydown", function (event) {
 });
 
 setInterval(createEnemy, 1000);
-
-// TODO: and pass player's x & y as arguments to createBullet function
